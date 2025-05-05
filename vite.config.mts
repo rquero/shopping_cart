@@ -40,6 +40,7 @@ export default defineConfig({
       },
     }),
   ],
+  base: 'https://github.com/rquero/shopping_cart',
   optimizeDeps: {
     exclude: [
       'vuetify',
