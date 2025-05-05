@@ -49,12 +49,17 @@
   const store = useCartStore()
   const cartItems = store.cart
 
-  const headers = [
-    { text: 'Imagen', value: 'image', align: 'start', key: 'image', title: 'Imagen' },
-    { text: 'Nombre', value: 'name', key: 'name', title: 'Nombre' },
-    { text: 'Precio', value: 'price', key: 'price', title: 'Precio' },
-    { text: 'Descripción', value: 'description', key: 'description', title: 'Descripción' },
-    { text: 'Acciones', value: 'actions', sortable: false, key: 'actions', title: 'Acciones' },
+  const headers: Array<{
+    text: string;
+    value: string;
+    align?: 'start' | 'center' | 'end';
+    sortable?: boolean;
+  }> = [
+    { text: 'Imagen', value: 'image', align: 'start', sortable: true },
+    { text: 'Nombre', value: 'name', align: 'start', sortable: true },
+    { text: 'Precio', value: 'price', align: 'start', sortable: true },
+    { text: 'Descripción', value: 'description', align: 'start', sortable: true },
+    { text: 'Acciones', value: 'actions', align: 'end', sortable: false },
   ]
 
   const router = useRouter()
